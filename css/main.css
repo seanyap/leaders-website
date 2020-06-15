@@ -1,0 +1,886 @@
+/* BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: .05em;
+  line-height: 1.5;
+  color: #222;
+  background: #fff;
+}
+
+a, a:hover, a:focus {
+  color: #000;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: 'Oswald', sans-serif;
+	font-weight: 300;
+}
+
+h1 { font-size: 50px; line-height: 64px; }
+h2 { font-size: 40px; line-height: 50px; }
+h3 { font-size: 28px; line-height: 36px; }
+h4 { font-size: 21px; line-height: 27px; }
+h5 { font-size: 17px; line-height: 22px; }
+h6 { font-size: 14px; line-height: 18px; }
+
+@media (max-width: 768px) {
+	body { font-size: 14px; line-height: 23px}
+	h1   { font-size: 30px; line-height: 35px}
+	h2   { font-size: 30px; line-height: 35px}
+	h3   { font-size: 21px; line-height: 24px}
+	h4   { font-size: 22px; line-height: 24px}
+	h5   { font-size: 17px; line-height: 19px}
+  h6   { font-size: 13px; line-height: 15px}
+  
+  body {
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 85% !important;
+  }
+
+  #header {
+    padding: 0 !important;
+  }
+
+  #header nav .main-menu {
+   flex-wrap: wrap;
+  } 
+  #header nav .main-menu li {
+    margin: 0 10px !important;
+  }
+
+  #header .logo img{
+    height: 55px !important;
+  }
+
+  #hero {
+    padding: 40px 0 !important;
+  }
+
+  #hero #entrance {
+    width: 60%;
+    padding: 18px 30px !important;
+  }
+
+  #about {
+    padding: 60px 0 !important;
+  }
+
+  #about .flex {
+    flex-direction: column;
+  }
+
+  #about .flex #desc {
+    margin-top: 20px;
+  }
+
+  #dept {
+    padding: 60px 0 !important;
+  }
+
+  #dept .container #icons {
+    flex-wrap: wrap;
+    justify-content: space-evenly !important;
+    margin-top: 20px !important;
+  }
+
+  #dept .container #icons .card {
+    margin-top: 20px;
+  }
+
+  #dept .container #icons .card .icon {
+    width: 90px !important;
+    height: 90px !important;
+  }
+
+  #gallery {
+    padding: 60px 0 !important;
+  }
+
+  #gallery .grid {
+    margin-top: 40px !important;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px 100px 100px;
+  }
+
+  #gallery .btn {
+    margin-top: 0px !important;
+  }
+
+  #contact .container .flex {
+    flex-direction: column;
+  }
+
+  #contact .container .flex #info {
+    margin-right: 0 !important;
+  }
+
+  #contact .container .flex #map {
+    display: none;
+  }
+
+  #gallery-showcase h1 {
+    font-weight: 400 !important;
+  }
+
+  #gallery-showcase h3 {
+    margin-bottom: 15px !important;
+  }
+
+  #gallery-showcase #coronavirus {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px !important;
+  }
+  #gallery-showcase #individual {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px !important;
+  }
+  #gallery-showcase #sculpture {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px !important;
+  }
+  #gallery-showcase #lettering {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px !important;
+  }
+  #gallery-showcase #income-inequality {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px !important;
+  }
+  #gallery-showcase #fingerprint-poems {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px !important;
+  }
+  #gallery-showcase #comics {
+    grid-template-columns: 100% !important;
+    grid-template-rows: 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px 250px!important;
+  }
+
+}
+
+.container {
+  display: block;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.separator {
+  display: block;
+  width: 40px;
+  height: 2px;
+  background-color: #202d55;
+  margin-top: 10px;
+}
+
+.title {
+  letter-spacing: .08em;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+  grid-column-gap: 7px;
+  grid-row-gap: 7px;
+}
+
+/* PADDINGS % MARGINS */
+.p0   { padding: 0px !important  }
+.p10  { padding: 10px !important }
+.p20  { padding: 20px !important }
+.p30  { padding: 30px !important }
+.p40  { padding: 40px !important }
+.p50  { padding: 50px !important }
+.p60  { padding: 60px !important }
+.p70  { padding: 70px !important }
+.p80  { padding: 80px !important }
+.p90  { padding: 90px !important }
+.p100 { padding: 100px !important}
+.p110 { padding: 110px !important}
+.p120 { padding: 120px !important}
+.p130 { padding: 130px !important}
+.p140 { padding: 140px !important}
+
+.m0   { margin: 0px !important  }
+.m10  { margin: 10px !important }
+.m20  { margin: 20px !important }
+.m30  { margin: 30px !important }
+.m40  { margin: 40px !important }
+.m50  { margin: 50px !important }
+.m60  { margin: 60px !important }
+.m70  { margin: 70px !important }
+.m80  { margin: 80px !important }
+.m90  { margin: 90px !important }
+.m100 { margin: 100px !important}
+.m110 { margin: 110px !important}
+.m120 { margin: 120px !important}
+.m130 { margin: 130px !important}
+.m140 { margin: 140px !important}
+
+.pt0   { padding-top: 0px !important  }
+.pt10  { padding-top: 10px !important }
+.pt20  { padding-top: 20px !important }
+.pt30  { padding-top: 30px !important }
+.pt40  { padding-top: 40px !important }
+.pt50  { padding-top: 50px !important }
+.pt60  { padding-top: 60px !important }
+.pt70  { padding-top: 70px !important }
+.pt80  { padding-top: 80px !important }
+.pt90  { padding-top: 90px !important }
+.pt100 { padding-top: 100px !important}
+.pt110 { padding-top: 110px !important}
+.pt120 { padding-top: 120px !important}
+.pt130 { padding-top: 130px !important}
+.pt140 { padding-top: 140px !important}
+
+.pb0   { padding-bottom: 0px !important  }
+.pb10  { padding-bottom: 10px !important }
+.pb20  { padding-bottom: 20px !important }
+.pb30  { padding-bottom: 30px !important }
+.pb40  { padding-bottom: 40px !important }
+.pb50  { padding-bottom: 50px !important }
+.pb60  { padding-bottom: 60px !important }
+.pb70  { padding-bottom: 70px !important }
+.pb80  { padding-bottom: 80px !important }
+.pb90  { padding-bottom: 90px !important }
+.pb100 { padding-bottom: 100px !important}
+.pb110 { padding-bottom: 110px !important}
+.pb120 { padding-bottom: 120px !important}
+.pb130 { padding-bottom: 130px !important}
+.pb140 { padding-bottom: 140px !important}
+
+.mt0   { margin-top: 0px !important  }
+.mt10  { margin-top: 10px !important }
+.mt20  { margin-top: 20px !important }
+.mt30  { margin-top: 30px !important }
+.mt40  { margin-top: 40px !important }
+.mt50  { margin-top: 50px !important }
+.mt60  { margin-top: 60px !important }
+.mt70  { margin-top: 70px !important }
+.mt80  { margin-top: 80px !important }
+.mt90  { margin-top: 90px !important }
+.mt100 { margin-top: 100px !important}
+.mt110 { margin-top: 110px !important}
+.mt120 { margin-top: 120px !important}
+.mt130 { margin-top: 130px !important}
+.mt140 { margin-top: 140px !important}
+
+.mb0   { margin-bottom: 0px !important  }
+.mb10  { margin-bottom: 10px !important }
+.mb20  { margin-bottom: 20px !important }
+.mb30  { margin-bottom: 30px !important }
+.mb40  { margin-bottom: 40px !important }
+.mb50  { margin-bottom: 50px !important }
+.mb60  { margin-bottom: 60px !important }
+.mb70  { margin-bottom: 70px !important }
+.mb80  { margin-bottom: 80px !important }
+.mb90  { margin-bottom: 90px !important }
+.mb100 { margin-bottom: 100px !important}
+.mb110 { margin-bottom: 110px !important}
+.mb120 { margin-bottom: 120px !important}
+.mb130 { margin-bottom: 130px !important}
+.mb140 { margin-bottom: 140px !important}
+
+/* HEADER */
+#header {
+  text-align: center;
+}
+
+#header .logo {
+  font-family: 'Oswald', serif;
+  display: block;
+}
+
+#header .logo img {
+  max-height: 70px;
+}
+
+/* MENU */
+#header nav {
+  display: block;
+}
+
+#header nav .main-menu {
+  display: flex;
+  justify-content: center;
+}
+
+#header nav .main-menu li {
+  list-style: none;
+  font-size: 14px;
+  margin: 15px 20px;
+}
+
+#header nav .main-menu li a {
+  color: #202d55;
+  letter-spacing: 0.12em;
+}
+
+
+/* HERO */
+#hero {
+  background: url("../img/landing/landing-image.png") center center no-repeat;
+  background-size: cover;
+  /* opacity: .9; */
+  position: relative;
+}
+
+#hero #entrance {
+  font-family: 'Oswald', serif;
+  position: absolute; 
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, .85);
+	color: #000;
+  text-align: center;
+  padding: 35px 80px;
+}
+
+#hero #entrance h1 {
+  font-weight: 300;
+  letter-spacing: 0.08em;
+}
+
+/* ABOUT */
+#about .container {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+#about .container .flex {
+  display: flex;
+  justify-self: center;
+}
+
+#about .container .title-container {
+  flex: 2;
+}
+
+#about .container #desc {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #777;
+  flex: 5;
+}
+
+/* ACADEMIC DEPARTMENT */
+#dept {
+  background-color: #202d55;
+  color: #000;
+}
+
+#dept .container .title {
+  color: #fff;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.18em;
+}
+
+#dept .container #icons{
+  display: flex;
+  justify-content: space-evenly;
+} 
+
+#dept .container #icons .card .icon{
+  display: inline-block;
+  background-color: #fff;
+  color: #202d55;
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  position: relative;
+}
+
+#dept .container #icons .card .icon i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#dept .container #icons .card h3 {
+  color: #fff;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+/* GALLERY */
+#gallery {
+  text-align: center;
+}
+
+#gallery .container .separator {
+  margin: 10px auto 0 auto;
+}
+
+#gallery .grid {
+  grid-template-rows: 350px 350px 350px;
+}
+
+/* IMAGES */
+#corona-1 {
+  background: url("../img/gallery/corona/corona-1.jpeg") center center no-repeat;
+  background-size: cover;
+}
+#corona-2 {
+  background: url("../img/gallery/corona/corona-2.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-3 {
+  background: url("../img/gallery/corona/corona-3.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-4 {
+  background: url("../img/gallery/corona/corona-4.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-5 {
+  background: url("../img/gallery/corona/corona-5.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-6 {
+  background: url("../img/gallery/corona/corona-6.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-7 {
+  background: url("../img/gallery/corona/corona-7.jpg") center center no-repeat;
+  background-size: cover;
+}
+#corona-8 {
+  background: url("../img/gallery/corona/corona-8.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-9 {
+  background: url("../img/gallery/corona/corona-9.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-10 {
+  background: url("../img/gallery/corona/corona-10.jpg") center center no-repeat;
+  background-size: cover;
+}
+#corona-11 {
+  background: url("../img/gallery/corona/corona-11.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-12 {
+  background: url("../img/gallery/corona/corona-12.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-13 {
+  background: url("../img/gallery/corona/corona-13.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-14 {
+  background: url("../img/gallery/corona/corona-14.png") center center no-repeat;
+  background-size: cover;
+}
+#corona-15 {
+  background: url("../img/gallery/corona/corona-15.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-1 {
+  background: url("../img/gallery/comics/comic-1.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-2 {
+  background: url("../img/gallery/comics/comic-2.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-3 {
+  background: url("../img/gallery/comics/comic-3.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-4 {
+  background: url("../img/gallery/comics/comic-4.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-5 {
+  background: url("../img/gallery/comics/comic-5.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-6 {
+  background: url("../img/gallery/comics/comic-6.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-7 {
+  background: url("../img/gallery/comics/comic-7.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-8 {
+  background: url("../img/gallery/comics/comic-8.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-9 {
+  background: url("../img/gallery/comics/comic-9.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-10 {
+  background: url("../img/gallery/comics/comic-10.png") center center no-repeat;
+  background-size: cover;
+}
+
+#comic-11 {
+  background: url("../img/gallery/comics/comic-11.png") center center no-repeat;
+  background-size: cover;
+}
+
+#individual-1 {
+  background: url("../img/gallery/individual/individual-1.jpeg") center center no-repeat;
+  background-size: cover;
+}
+#individual-2 {
+  background: url("../img/gallery/individual/individual-2.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-3 {
+  background: url("../img/gallery/individual/individual-3.png") center center no-repeat;
+  background-size: cover;
+}
+#individual-4 {
+  background: url("../img/gallery/individual/individual-4.png") center center no-repeat;
+  background-size: cover;
+}
+#individual-5 {
+  background: url("../img/gallery/individual/individual-5.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-6 {
+  background: url("../img/gallery/individual/individual-6.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-7 {
+  background: url("../img/gallery/individual/individual-7.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-8 {
+  background: url("../img/gallery/individual/individual-8.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-9 {
+  background: url("../img/gallery/individual/individual-9.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-10 {
+  background: url("../img/gallery/individual/individual-10.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-11 {
+  background: url("../img/gallery/individual/individual-11.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-12 {
+  background: url("../img/gallery/individual/individual-12.png") center center no-repeat;
+  background-size: cover;
+}
+#individual-13 {
+  background: url("../img/gallery/individual/individual-13.jpg") center center no-repeat;
+  background-size: cover;
+}
+#individual-14 {
+  background: url("../img/gallery/individual/individual-14.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+#sculpture-1 {
+  background: url("../img/gallery/sculptures/sculpture-1.jpg") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-2 {
+  background: url("../img/gallery/sculptures/sculpture-2.png") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-3 {
+  background: url("../img/gallery/sculptures/sculpture-3.jpg") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-4 {
+  background: url("../img/gallery/sculptures/sculpture-4.png") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-5 {
+  background: url("../img/gallery/sculptures/sculpture-5.png") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-6 {
+  background: url("../img/gallery/sculptures/sculpture-6.jpg") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-7 {
+  background: url("../img/gallery/sculptures/sculpture-7.png") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-8 {
+  background: url("../img/gallery/sculptures/sculpture-8.jpg") center center no-repeat;
+  background-size: cover;
+}
+#sculpture-9 {
+  background: url("../img/gallery/sculptures/sculpture-9.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+#lettering-1 {
+  background: url("../img/gallery/letterings/lettering-1.jpg") center center no-repeat;
+  background-size: cover;
+}
+#lettering-2 {
+  background: url("../img/gallery/letterings/lettering-2.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-3 {
+  background: url("../img/gallery/letterings/lettering-3.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-4 {
+  background: url("../img/gallery/letterings/lettering-4.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-5 {
+  background: url("../img/gallery/letterings/lettering-5.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-6 {
+  background: url("../img/gallery/letterings/lettering-6.jpg") center center no-repeat;
+  background-size: cover;
+}
+#lettering-7 {
+  background: url("../img/gallery/letterings/lettering-7.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-8 {
+  background: url("../img/gallery/letterings/lettering-8.jpg") center center no-repeat;
+  background-size: cover;
+}
+#lettering-9 {
+  background: url("../img/gallery/letterings/lettering-9.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-10 {
+  background: url("../img/gallery/letterings/lettering-10.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-11 {
+  background: url("../img/gallery/letterings/lettering-11.jpg") center center no-repeat;
+  background-size: cover;
+}
+#lettering-12 {
+  background: url("../img/gallery/letterings/lettering-12.jpg") center center no-repeat;
+  background-size: cover;
+}
+#lettering-13 {
+  background: url("../img/gallery/letterings/lettering-13.jpg") center center no-repeat;
+  background-size: cover;
+}
+#lettering-14 {
+  background: url("../img/gallery/letterings/lettering-14.png") center center no-repeat;
+  background-size: cover;
+}
+#lettering-15 {
+  background: url("../img/gallery/letterings/lettering-15.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+#income-inequality-1 {
+  background: url("../img/gallery/income-inequality/income-inequality-1.jpg") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-2 {
+  background: url("../img/gallery/income-inequality/income-inequality-2.jpeg") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-3 {
+  background: url("../img/gallery/income-inequality/income-inequality-3.jpg") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-4 {
+  background: url("../img/gallery/income-inequality/income-inequality-4.png") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-5 {
+  background: url("../img/gallery/income-inequality/income-inequality-5.png") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-6 {
+  background: url("../img/gallery/income-inequality/income-inequality-6.png") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-7 {
+  background: url("../img/gallery/income-inequality/income-inequality-7.png") center center no-repeat;
+  background-size: cover;
+}
+#income-inequality-8 {
+  background: url("../img/gallery/income-inequality/income-inequality-8.png") center center no-repeat;
+  background-size: cover;
+}
+/* #income-inequality-9 {
+  background: url("../img/gallery/income-inequality/income-inequality-9.png") center center no-repeat;
+  background-size: cover;
+} */
+
+#poem-1 {
+  background: url("../img/gallery/poems/poem-1.png") center center no-repeat;
+  background-size: cover;
+}
+#poem-2 {
+  background: url("../img/gallery/poems/poem-2.png") center center no-repeat;
+  background-size: cover;
+}
+#poem-3 {
+  background: url("../img/gallery/poems/poem-3.jpg") center center no-repeat;
+  background-size: cover;
+}
+#poem-4 {
+  background: url("../img/gallery/poems/poem-4.jpg") center center no-repeat;
+  background-size: cover;
+}
+#poem-5 {
+  background: url("../img/gallery/poems/poem-5.jpg") center center no-repeat;
+  background-size: cover;
+}
+#poem-6 {
+  background: url("../img/gallery/poems/poem-6.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+
+#gallery .container .btn {
+  display: inline-block;
+  padding: 15px 55px;
+  border: 1px solid #222;
+  border-radius: 25px;
+}
+
+/* CONTACT */
+#contact {
+  background: #f2f2f2;
+}
+
+#contact .container .title {
+  text-align: center;
+}
+
+#contact .container .separator {
+  margin: 10px auto 0 auto;
+}
+
+#contact .container .flex {
+  display: flex;
+}
+
+#contact .container .flex #info {
+  position: relative;
+  background-color: #fff;
+  color: #555;
+  line-height: 2;
+  text-align: center;
+  border-radius: 30px;
+  margin-right: 20px;
+  box-shadow: 1px 3px 6px #ccc;
+  flex: 1;
+}
+
+#contact .container .flex #info i {
+  display: inline-block;
+  width: 50px;
+}
+
+#contact .container .flex #map {
+  /* height: 100%; */
+  background-color: #202d55;
+  border-radius: 25px;
+  margin-left: 20px;
+  box-shadow: 1px 4px 6px #ccc;
+  flex: 1;
+}
+
+/* CTA */
+#cta {
+  background: url("../img/cta/building-b&w4.png") center bottom no-repeat;
+  background-size: auto;
+  color: #f2f2f2;
+  text-align: center;
+}
+
+#cta .btn {
+  display: inline-block;
+  padding: 10px 40px;
+  border: 2px solid #fff;
+  border-radius: 15px;
+  /* background-color: #202d55; */
+  color: #f2f2f2;
+}
+
+/* FOOTER */
+#footer {
+  font-weight: 300;
+  text-align: center;
+}
+
+#footer a {
+  font-weight: 300;
+}
+
+
+/* GALLERY SHOWCASE */
+#gallery-showcase {
+  background-color: #f2f2f2;
+}
+
+#gallery-showcase .title {
+  text-align: center;
+}
+
+#gallery-showcase .separator {
+  width: 80px;
+  margin: 10px auto 0 auto;
+}
+
+#gallery-showcase .container #coronavirus {
+  grid-template-rows: 350px 350px 350px 350px 350px;
+}
+
+#gallery-showcase .container #comics {
+  grid-template-rows: 350px 350px 350px 350px;
+}
+
+#gallery-showcase .container #individual {
+  grid-template-rows: 350px 350px 350px 350px 350px;
+}
+
+#gallery-showcase .container #sculpture {
+  grid-template-rows: 350px 350px 350px;
+}
+
+#gallery-showcase .container #lettering {
+  grid-template-rows: 350px 350px 350px 350px 350px;
+}
+
+#gallery-showcase .container #income-inequality {
+  grid-template-rows: 350px 350px 350px;
+}
+
+#gallery-showcase .container #fingerprint-poems {
+  grid-template-rows: 350px 350px;
+}
